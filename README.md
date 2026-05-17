@@ -1,3 +1,15 @@
+
+---
+title: SOVEREIGN
+emoji: 🛡️
+colorFrom: blue
+colorTo: cyan
+sdk: streamlit
+sdk_version: "1.35.0"
+app_file: app.py
+pinned: false
+---
+
 # 🛡️ SOVEREIGN — Enterprise AI Immune System
 
 > *Predict. Detect. Neutralize. Automatically.*
