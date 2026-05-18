@@ -66,6 +66,10 @@ class ImmuneMemory:
             "model_generation": self.stats["model_generation"]
         }
 
+    # Alias for backward compatibility with app.py
+    def get_immunity_stats(self) -> dict:
+        return self.get_stats()
+
     def reset(self):
         self._reset_stats()
         self._save()
