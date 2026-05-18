@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# 🛡️ SOVEREIGN-
+# 🛡️ SOVEREIGN
 
 ### *Self-Evolving Enterprise AI Immune System*
 
@@ -71,7 +71,7 @@ Most enterprise AI systems today are essentially **unguarded autonomous employee
 
 ---
 
-# 🛡️ The Solution — SOVEREIGN-A
+# 🛡️ The Solution — SOVEREIGN
 
 **SOVEREIGN-A** acts as an **AI Immune System** for enterprise agents.
 
