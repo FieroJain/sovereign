@@ -519,7 +519,10 @@ with st.sidebar:
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
+    st.divider()
 
+    st.markdown("🦞 **Lobster Trap DPI Proxy — Active**")
     st.divider()
 
     st.markdown('<div style="font-family:\'Share Tech Mono\',monospace;font-size:10px;color:#446688;letter-spacing:2px;margin-bottom:8px;">CLIENT</div>', unsafe_allow_html=True)
