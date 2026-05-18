@@ -8,20 +8,16 @@ from datetime import datetime
 class ImmuneMemory:
     def __init__(self):
         self.stats_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "immunity_stats.json")
-        self._load()
+        self.stats = self._load()
 
     def _load(self):
         if os.path.exists(self.stats_path):
             try:
                 with open(self.stats_path, "r") as f:
-                    self.stats = json.load(f)
-                return
+                    return json.load(f)
             except:
                 pass
-        self._reset_stats()
-
-    def _reset_stats(self):
-        self.stats = {
+        return {
             "attacks_captured": 0,
             "variants_generated": 0,
             "policies_predeployed": 0,
@@ -66,10 +62,24 @@ class ImmuneMemory:
             "model_generation": self.stats["model_generation"]
         }
 
-    # Alias for backward compatibility with app.py
     def get_immunity_stats(self) -> dict:
         return self.get_stats()
 
-    def reset(self):
-        self._reset_stats()
+    def save_stats(self):
+        """Save stats to file (called by app.py)"""
         self._save()
+
+    def reset(self):
+        self.stats = {
+            "attacks_captured": 0,
+            "variants_generated": 0,
+            "policies_predeployed": 0,
+            "last_retrain": "Never",
+            "model_generation": 1,
+            "retrain_history": []
+        }
+        self._save()
+
+    def clear(self):
+        """Alias for reset (for compatibility)"""
+        self.reset()
